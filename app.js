@@ -1,20 +1,18 @@
-alert("Boas vindas ao nosso site");
-let quantidadeMilhas = prompt("Digite sua quantidade milhas");
+alert('Boas vindas ao jogo do número secreto');
 
-// Converte a string para um número inteiro
-quantidadeMilhas = parseInt(quantidadeMilhas); 
+// Adicione um console.log para verificar o valor de "chute" após a entrada do usuário
+let chute = prompt('Escolha um número entre 1 e 10');
+console.log('Valor do chute:', chute);
 
-let porcentagemDesconto = 0;
+let numeroSecreto = 4;
 
-if(quantidadeMilhas >= 30000){
-    porcentagemDesconto = porcentagemDesconto + 20;
-    alert("Seu desconto é de " + porcentagemDesconto + "%"); // Adicionado um texto explicativo
+// Adicione um console.log para verificar a comparação entre "chute" e "numeroSecreto"
+console.log('Resultado da comparação:', chute == numeroSecreto);
+
+if (chute == numeroSecreto) {
+    alert('Acertou');
 } else {
-    if(quantidadeMilhas > 5000){
-        porcentagemDesconto = porcentagemDesconto + 10;
-        alert("Seu desconto é de " + porcentagemDesconto + "%"); // Adicionado um texto explicativo
-    }
-    else{
-        alert("Você não tem desconto")
-    }
+    // Adicione um console.log para verificar o valor de "numeroSecreto" quando o jogador erra
+    console.log('Valor do número secreto:', numeroSecreto);
+    alert('O número secreto era ' + numeroSecreto);
 }
